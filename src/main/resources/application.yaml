@@ -1,0 +1,30 @@
+server:
+  port: 4005
+spring:
+  url: http://localhost:4005/registration
+  datasource:
+    password: password
+    url: jdbc:postgresql://localhost:5432/irecuit1
+    username: postgres
+  jackson:
+    time-zone: IST
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+         lob:
+          non_contextual_creation: true
+        
+pdf:
+  downloadPdfFile: E:\\temp\\
+  exeUrl: C:\\wkhtmltopdf\\bin\\wkhtmltopdf
+Ap:
+  assessmentURL: https://staging.irecruit.org.in/iRecruit/
+  dmsURL: http://staging.dmssales.co.in:9003/iRecruit/
+Data:
+  dataScienceAuthURL: https://staging.dmssales.co.in:8098/MiscServices/api/auth/login
+  dataScienceURL: https://staging.dmssales.co.in:8098/MiscServices/api/cft/lmsmodel
